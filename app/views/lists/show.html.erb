@@ -1,0 +1,21 @@
+<h1>-------------------------</h1>
+
+<%= link_to 'My lists', lists_path %>
+<%= link_to 'New list', new_list_path %>
+
+<h1><%= @list.name %></h1>
+
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item">
+      <%= image_tag bookmark.movie.poster_url, alt: 'Movie poster' %>
+      <%= bookmark.movie.title %>
+      <%= bookmark.movie.rating %>
+      <%= bookmark.movie.overview %>
+      <%= bookmark.comment %>
+    </li>
+    <%= link_to 'delete', bookmark_path, method: :delete %>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a bookmark', new_list_bookmark_path(@list) %>
