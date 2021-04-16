@@ -1,9 +1,12 @@
-<h1>Your movie lists</h1>
+<div class="container">
+   <div class="banner">
+    <h1>Your movie lists</h1>
+  </div>
+  <ol>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list %></li>
+    <% end %>
+  </ol>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Create a movie list', new_list_path %>
+  <%= link_to 'Create a movie list', new_list_path %>
+</div>
