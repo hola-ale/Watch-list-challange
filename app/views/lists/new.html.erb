@@ -3,7 +3,7 @@
   <div class="form">
     <%= simple_form_for [ @list] do |f| %>
       <%= f.input :name %>
-      <%= f.association :movies, as: :radio_buttons %>
+      <%= f.association :movies %>
       <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
