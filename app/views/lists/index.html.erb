@@ -5,7 +5,7 @@
   <ol>
     <% @lists.each do |list| %>
       <li><%= link_to list.name, list %>
-        <% if @list.photo.attached?  %>
+        <% if list.photo.attached?  %>
           <%= cl_image_tag list.photo.key, height: 50, width: 50, crop: :fill %>
         <% end %>
       </li>
