@@ -4,7 +4,9 @@
   <%= link_to 'New list', new_list_path %>
 
   <h1><%= @list.name %></h1>
-  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% if @list.photo.attached?  %>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end  %>
 
   <ul class="list-group">
     <% @list.bookmarks.each do |bookmark| %>

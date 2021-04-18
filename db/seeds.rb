@@ -17,7 +17,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
   movie = Movie.create(
     title: Faker::Movie.title,
     overview: Faker::Movie.quote,
-    poster_url: "https://unsplash.com/s/photos/movie",
+    poster_url: "https://res.cloudinary.com/dw42o1s4v/image/upload/v1618763335/jakob-owens-CiUR8zISX60-unsplash_ygsrrr.jpg",
     rating: rand(1..10)
     )
 end
