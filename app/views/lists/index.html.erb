@@ -4,7 +4,7 @@
   </div>
   <ol>
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list %></li>
+      <li><%= link_to list.name, list %><%= cl_image_tag list.photo.key, height: 50, width: 50, crop: :fill %></li>
     <% end %>
   </ol>
 
